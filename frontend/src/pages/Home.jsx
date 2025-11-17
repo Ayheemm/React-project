@@ -5,7 +5,7 @@ import "../css/Home.css";
 
 function Home() {
     const [searchQuery, setSearchQuery] = useState("");
-    const [Movies, setMovies] = useState([]);
+    const [movies, setMovies] = useState([]);
     const [error, setError] = useState (null);
     const [loading, setLoading] = useState (true);
 
@@ -23,13 +23,13 @@ function Home() {
         }
 
          };
-         loadPopularMovies
+         loadPopularMovies();
     }, []);
 
     
 
 const handleSearch = (e) => {
-    e.preventDefalut()
+    e.preventDefault()
     alert(searchQuery);
 
 }
